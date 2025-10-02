@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,54 +11,79 @@ class SplashScreen extends StatelessWidget {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          Image(image: AssetImage("Assets/Logo/slashlogo.jpg"),
+
+          Image(
+            image: AssetImage("Assets/Image/slashlogo 1.png"),
             fit: BoxFit.fill,
-            colorBlendMode: BlendMode.modulate ,),
-          BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0), // Adjust blur intensity
-            child: Container(
-              color: Colors.black.withOpacity(0), // Transparent overlay
-            ),
           ),
+
+          // Container(
+          //   color: Colors.white.withOpacity(0),
+          //   child:
+            BackdropFilter(
+              filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+            ),
+          // ),
+
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+
               Container(
                 height: 109,
-                  width: 110,
+                width: 110,
                 decoration: BoxDecoration(
-                  gradient: LinearGradient(colors: [Color(0xFF2196F3),Color(0xFF8E24AA)],
-                  begin: Alignment.centerLeft,end: Alignment.centerRight),
-                  borderRadius:BorderRadius.circular(25)
+                  gradient: LinearGradient(
+                    colors: [Color(0xFF2196F3), Color(0xFF8E24AA)],
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                  ),
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Image(
+                    image: AssetImage("Assets/Logo/Mortarboard.png"),
+                  ),
                 ),
               ),
-              Text("Campus Connect",
+
+              SizedBox(height: 20),
+
+              Text(
+                "Campus Connect",
                 style: GoogleFonts.inter(
-                    fontSize:26,fontWeight:FontWeight.w800,
-                    color: Color(0xFF282727)),),
-              Text("Beyond One Campus",
+                  fontSize: 26,
+                  fontWeight: FontWeight.w800,
+                  color: Color(0xFF282727),
+                ),
+              ),
+
+              Text(
+                "Beyond One Campus",
                 style: GoogleFonts.inter(
-                    fontSize:18,fontWeight:FontWeight.w600,
-                    color: Color(0xFF454141)),),
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                  color: Color(0xFF454141),
+                ),
+              ),
 
               SizedBox(height: 60),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CircleAvatar(
-                    radius: 5,
-                    backgroundColor: Color(0xFF2196F3),
-                  ),
+                  CircleAvatar(radius: 5, backgroundColor: Color(0xFF2196F3)),
                   SizedBox(width: 6),
-                  CircleAvatar(radius: 5, backgroundColor: Color(0xFF9C27B0),),
+                  CircleAvatar(radius: 5, backgroundColor: Color(0xFF9C27B0)),
                   SizedBox(width: 6),
-                  CircleAvatar(radius: 5, backgroundColor: Color(0xFFE91E63),
-                  )
+                  CircleAvatar(radius: 5, backgroundColor: Color(0xFFE91E63)),
                 ],
               ),
+
             ],
-          )
+          ),
+
         ],
       ),
     );
