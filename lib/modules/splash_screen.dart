@@ -76,7 +76,7 @@ class SplashScreen extends StatelessWidget {
                   CircleAvatar(radius: 5, backgroundColor: Color(0xFF2196F3)),
                   SizedBox(width: 6),
                   CircleAvatar(radius: 5, backgroundColor: Color(0xFF9C27B0)),
-                  SizedBox(width: 6),
+                  SizedBox(width: 61),
                   CircleAvatar(radius: 5, backgroundColor: Color(0xFFE91E63)),
                 ],
               ),
