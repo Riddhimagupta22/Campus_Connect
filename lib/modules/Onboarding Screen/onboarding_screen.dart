@@ -37,7 +37,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             width: 60,
             child: ElevatedButton(onPressed: (){},style: ElevatedButton.styleFrom(
               shape: CircleBorder(),
-            ), child: child),
+            ), child: Image.asset("name")),
           )
         ],
       ),
